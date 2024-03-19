@@ -1,0 +1,51 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "cn-cloud-integration",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "cn-cloud-integration",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "cn.playground",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://cdn.crabnebula.app/update/crabnebula/test-fabien/{{target}}-{{arch}}/{{current_version}}"
+      ],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDg4Qzg0RDI2OEVEQjcwRDYKUldUV2NOdU9KazNJaUl0dElrRUd6cE5MWE9jNmxwVENDeXA1NHlESS9ad2srdWxPcWZ4MzJLbnUK"
+    }
+  }
+}
