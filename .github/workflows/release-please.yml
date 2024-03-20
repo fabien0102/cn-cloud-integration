@@ -12,6 +12,7 @@ name: release-please
 jobs:
   # Create / Update a PR for the next release
   release-please:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
@@ -19,5 +20,3 @@ jobs:
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: tauri
-    outputs:
-      release-created: ${{ steps.release.outputs.release_created }}
