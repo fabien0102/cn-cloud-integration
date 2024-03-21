@@ -37,8 +37,7 @@ export function WhatsNew() {
         }}
       >
         <h1>What's new?</h1>
-        <p>The real question would be, what's not new?</p>
-        <p>Everything is new here!!!</p>
+        <p>OMG, this is amazing</p>
         <button onClick={() => setHasUpdate(lastVersion)}>Cool!</button>
       </div>
     </Show>
