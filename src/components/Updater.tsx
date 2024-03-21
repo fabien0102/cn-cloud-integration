@@ -6,7 +6,8 @@ import {
   UpdateStatus,
 } from "@tauri-apps/api/updater";
 import {
-  Show,
+  Match,
+  Switch,
   createEffect,
   createResource,
   createSignal,
@@ -41,11 +42,21 @@ export function Updater() {
 
   return (
     <>
-      status: {status()}
-      <Show when={update()?.shouldUpdate}>
-        <div>Update available!</div>
-        <button onClick={installUpdate}>Update now</button>
-      </Show>
+      <Switch>
+        <Match when={status() === "PENDING"}>
+          <div>Updating…</div>
+          <button disabled>Update now</button>
+        </Match>
+        <Match when={status() === "DONE"}>
+          <div>Et voilà!</div>
+          <button disabled>Update now</button>
+        </Match>
+        <Match when={status() === "ERROR"}>Updater error: {error()}</Match>
+        <Match when={update()?.shouldUpdate}>
+          <div>Update available!</div>
+          <button onClick={installUpdate}>Update now</button>
+        </Match>
+      </Switch>
       <button onClick={refetch}>Check for update</button>
     </>
   );

@@ -3,6 +3,7 @@ import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 import { Updater } from "./components/Updater";
+import { WhatsNew } from "./components/WhatsNew";
 
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
@@ -16,7 +17,6 @@ function App() {
   return (
     <div class="container">
       <h1>Welcome to Tauri!</h1>
-      <p>Look at this new feature!</p>
 
       <div class="row">
         <a href="https://vitejs.dev" target="_blank">
@@ -49,6 +49,7 @@ function App() {
 
       <p>{greetMsg()}</p>
       <Updater />
+      <WhatsNew />
     </div>
   );
 }
