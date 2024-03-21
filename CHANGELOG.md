@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/fabien0102/cn-cloud-integration/compare/cn-cloud-integration-v1.3.0...cn-cloud-integration-v1.4.0) (2024-03-21)
+
+
+### Features
+
+* demo ([9fa24b0](https://github.com/fabien0102/cn-cloud-integration/commit/9fa24b012900ed302ba1131d6ba71630088611a7))
+
 ## [1.3.0](https://github.com/fabien0102/cn-cloud-integration/compare/cn-cloud-integration-v1.2.0...cn-cloud-integration-v1.3.0) (2024-03-21)
 
 
