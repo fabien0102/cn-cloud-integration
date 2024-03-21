@@ -7,7 +7,7 @@ import { Show, createEffect, createSignal } from "solid-js";
  * 2. Write a new announcement (you can check `CHANGELOG.md` to help you)
  * 3. Publish a new version
  */
-const lastVersion = "1.1.0";
+const lastVersion = "1.2.0";
 
 export function WhatsNew() {
   const [hasUpdate, setHasUpdate] = createSignal(
@@ -37,7 +37,7 @@ export function WhatsNew() {
         }}
       >
         <h1>What's new?</h1>
-        <p>OMG, this is amazing</p>
+        <p>Hello demo</p>
         <button onClick={() => setHasUpdate(lastVersion)}>Cool!</button>
       </div>
     </Show>
